@@ -7,9 +7,9 @@ Movie Memory is a small full-stack app. You sign in with Google, tell it your fa
 ## Getting it running
 
 ```bash
-npm install
 cp .env.example .env      # fill in the values described below
-npx prisma migrate deploy # creates the tables
+npm install               # also runs "prisma generate" via postinstall
+npx prisma migrate deploy # applies the migration to your database
 npm run dev               # http://localhost:3000
 npm test                  # backend tests (needs DATABASE_URL)
 ```
